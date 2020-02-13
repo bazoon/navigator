@@ -1,6 +1,12 @@
 .stats {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
+}
+
+.stats__item-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .stats__item {
@@ -27,3 +33,27 @@
   color: @gray1;
 }
 
+@media (min-width: @desktop-width) {
+  .stats {
+    width: @desktop-width;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px @gray6;
+    margin-bottom: 125px;
+  }
+
+  .stats__item-wrap {
+    align-items: start;
+  }
+
+  .stats__item {
+    flex-direction: row;
+    margin-bottom: 72px;
+  }
+
+  .stats__image {
+    margin-right: 24px;
+  }
+
+
+}

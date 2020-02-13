@@ -16,12 +16,12 @@
 }
 
 .programs__slider {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .programs__slider-wrap {
   display: grid;
-  grid-template-columns: 240px 240px 240px 240px 240px 240px;
+  grid-template-columns: 240px 240px 240px 240px 240px 240px 240px;
   grid-template-rows: auto;
 }
 
@@ -61,7 +61,6 @@
 }
 
 .programs__button {
-  // margin: 0 auto;
   width: 300px;
   height: 36px;
   background-color: @blue2;
@@ -72,4 +71,125 @@
   justify-content: center;
   align-items: center;
   border:none;
+}
+
+.programs__footer {
+  display: none;
+}
+
+.programs__pagination {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    width: @desktop-width;
+  }
+
+  .programs__wrap {
+    margin: 0;
+  }
+
+  .programs__title {
+    font-family: "SfUiBold", Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .programs__slider-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .programs__item {
+    width: 544px;
+    padding: 28px 32px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+
+  .programs__item-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+    flex: 1;
+  }
+
+  .programs__item-image {
+    width: 64px;
+    height: 69.5px;
+  }
+
+  .programs__item-title {
+    font-family: "GostUiMedium", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .programs__item-text {
+    font-family: "GostUiRegular", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .programs__button {
+    display: none;
+  }
+
+  .programs__footer {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 8px;
+    }
+
+    span {
+      margin-right: 32px;
+      font-family: "GostUiRegular", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: @gray1;
+    }
+  }
+
+  .programs__pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  .programs__pagination-list {
+    width: 412px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs__pagination-item {
+    width: 72px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .programs__pagination-item--active {
+    cursor: auto;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 49px;
+      height: 2px;
+      bottom: 0;
+      background-color: @blue3;
+    }
+  }
+
 }

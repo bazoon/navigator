@@ -20,13 +20,21 @@
           </a>
           <div class="sub-nav__right">
             <img src="./img/pin.svg" class="sub-nav__pin">
-            <div class="sub-nav__item desktop-visible">Тюмень</div>
-            <img src="./img/avatar.svg" class="desktop-visible" />
-            <div class="sub-nav__item desktop-visible">Личный кабинет</div>
+            <div class="sub-nav__item sub-nav__item--choose desktop-visible">Тюмень</div>
+            <img src="./img/avatar.svg" class="desktop-visible sub-nav__item--cab" />
+            <div class="sub-nav__item   desktop-visible">Личный кабинет</div>
             <div class="sub-nav__item mobile-visible">Вход</div>
           </div>
         </div>
       </nav>
+
+      <div class="mobile-header">
+        <div class="mobile-header__wrap">
+          <img class="mobile-header__logo" src="./img/logo.png" alt="logo">
+          <img class="mobile-header__toggle" src="./img/icon-menu-cross.svg" alt="">
+        </div>
+      </div>
+
       <nav class="main-nav">
         <div class="main-nav__wrap">
           <ul class="main-nav__list">
@@ -45,6 +53,9 @@
             <li class="main-nav__item">
               Документы
             </li>
+            <li class="main-nav__item main-nav__item--cab">
+              <img src="./img/key.svg" alt="key" class="main-nav__item-icon"> Личный кабинет
+            </li>
           </ul>
         </div>
       </nav>
@@ -54,78 +65,89 @@
             <img class="page-header__logo" src="./img/logo.png" alt="logo">
             <div class="page-header__title">
               Навигатор
-              <br> дополнительного
-              <br> образования
+              <br class="mobile-visible"> дополнительного
+              <br class="mobile-visible"> образования
               <br> Воронежской области
             </div>
           </div>
           <img class="page-header__toggle" src="./img/icon-menu-burger.svg" alt="">
         </div>
         <div class="search-box">
-          <input type="text" class="search-box__input">
+          <div class="search-box__input-wrap">
+            <img src="./img/search.svg" alt="search icon" class="search-box__icon">
+            <input type="text" class="search-box__input" placeholder="Что вы ищете?">
+            <button class="search-box__button">Найти</button>
+          </div>
           <div class="search-box__wrap">
             <div class="search-box__title">
               Фильтры для поиска программ
             </div>
-            <div class="search-box__select">
-              <select>
-                <option value="" data-placeholder>Муниципалитет</option>
-                <option value="0"> Аннинский район</option>
-                <option value="1">Бобровский район</option>
-                <option value="2">Богучарский район</option>
-                <option value="3"> Бутурлиновский район</option>
-              </select>
+            <div class="search-box__wrap2">
+              <div class="search-box__select">
+                <label class="search-box__label">Муниципалитет</label>
+                <select>
+                  <option value="" data-placeholder>Муниципалитет</option>
+                  <option value="0"> Аннинский район</option>
+                  <option value="1">Бобровский район</option>
+                  <option value="2">Богучарский район</option>
+                  <option value="3"> Бутурлиновский район</option>
+                </select>
+              </div>
+
+              <div class="search-box__select">
+                <label class="search-box__label">Организация</label>
+                <select>
+                  <option value="" data-placeholder>Организация</option>
+                  <option value="0">ООО Ромашка</option>
+                  <option value="1">ЗАО Дворец пионеров</option>
+                </select>
+              </div>
+
+              <div class="search-box__select">
+                <label class="search-box__label">Направление</label>
+                <select>
+                  <option value="" data-placeholder>Направление</option>
+                  <option value="0">Естественно-научное</option>
+                  <option value="1">Техническое</option>
+                </select>
+              </div>
+
+              <div class="search-box__select">
+                <label class="search-box__label">Профиль</label>
+                <select>
+                  <option value="" data-placeholder>Профиль</option>
+                  <option value="0">Волонтерская работа</option>
+                  <option value="1">Профессиональная ориентация</option>
+                </select>
+              </div>
+
+              <div class="search-box__select">
+                <label class="search-box__label">Стоимость</label>
+                <select>
+                  <option value="" data-placeholder>Стоимость</option>
+                  <option value="0">Бесплатная</option>
+                  <option value="1">Платная</option>
+                </select>
+              </div>
+
+              <div class="search-box__select">
+                <label class="search-box__label">Возраст от</label>
+                <select>
+                  <option value="" data-placeholder>Возраст от</option>
+                  <option value="0">от 3 лет</option>
+                  <option value="1">от 4 лет</option>
+                </select>
+              </div>
+
+              <div class="search-box__select">
+                <label class="search-box__label">Возраст до</label>
+                <select>
+                  <option value="" data-placeholder>Возраст до</option>
+                  <option value="0">до 3 лет</option>
+                  <option value="1">до 4 лет</option>
+                </select>
+              </div>
             </div>
-
-            <div class="search-box__select">
-              <select>
-                <option value="" data-placeholder>Организация</option>
-                <option value="0">ООО Ромашка</option>
-                <option value="1">ЗАО Дворец пионеров</option>
-              </select>
-            </div>
-
-            <div class="search-box__select">
-              <select>
-                <option value="" data-placeholder>Направление</option>
-                <option value="0">Естественно-научное</option>
-                <option value="1">Техническое</option>
-              </select>
-            </div>
-
-            <div class="search-box__select">
-              <select>
-                <option value="" data-placeholder>Профиль</option>
-                <option value="0">Волонтерская работа</option>
-                <option value="1">Профессиональная ориентация</option>
-              </select>
-            </div>
-
-            <div class="search-box__select">
-              <select>
-                <option value="" data-placeholder>Стоимость</option>
-                <option value="0">Бесплатная</option>
-                <option value="1">Платная</option>
-              </select>
-            </div>
-
-            <div class="search-box__select">
-              <select>
-                <option value="" data-placeholder>Возраст от</option>
-                <option value="0">от 3 лет</option>
-                <option value="1">от 4 лет</option>
-              </select>
-            </div>
-
-            <div class="search-box__select">
-              <select>
-                <option value="" data-placeholder>Возраст до</option>
-                <option value="0">до 3 лет</option>
-                <option value="1">до 4 лет</option>
-              </select>
-            </div>
-
-
           </div>
         </div>
 
@@ -139,43 +161,52 @@
       <div class="news__wrap">
         <div class="news__title">
           Новости
+          <img src="./img/right-h-2.svg" class="news__arrow" alt="">
         </div>
         <div class="news__slider">
           <div class="news__item">
             <img src="./img/Mask.png" alt="" class="news__image">
-            <div class="news__item-title">
-              Подходы к публикации открытых данных должны быть стандартными
-            </div>
-            <div class="news__footer">
-              Образование 23 марта 2017
+            <div class="news__description">
+              <div class="news__item-title">
+                Подходы к публикации открытых данных должны быть стандартными
+              </div>
+              <div class="news__footer">
+                Образование • 23 марта 2017
+              </div>
             </div>
           </div>
           <div class="news__item">
             <img src="./img/Mask2.png" alt="" class="news__image">
-            <div class="news__item-title">
-              Опубликована международная дорожная карта открытых данных
-            </div>
-            <div class="news__footer">
-              Образование 23 марта 2017
+            <div class="news__description">
+              <div class="news__item-title">
+                Опубликована международная дорожная карта открытых данных
+              </div>
+              <div class="news__footer">
+                Образование • 23 марта 2017
+              </div>
             </div>
           </div>
           <div class="news__item">
             <img src="./img/Mask3.png" alt="" class="news__image">
-            <div class="news__item-title">
-              На портале открытых данных Москвы обнародована карта мест проведения новогодних фейерверков
-            </div>
-            <div class="news__footer">
-              Образование 23 марта 2017
+            <div class="news__description">
+              <div class="news__item-title">
+                На портале открытых данных Москвы обнародована карта мест проведения новогодних фейерверков
+              </div>
+              <div class="news__footer">
+                Образование • 23 марта 2017
+              </div>
             </div>
           </div>
         </div>
-        <div class="news__button">Все новости</div>
+
       </div>
+      <div class="news__button">Все новости</div>
     </div>
     <div class="call">
       <div class="call__wrap">
         <div class="call__title">
-          Почувствуй себя настоящим туристом!
+          Почувствуй себя
+          <br class="desktop-visible">настоящим туристом!
         </div>
         <div class="call__text">
           Развитие туристской и краеведческой деятельности на территории Тюменской области.
@@ -188,20 +219,27 @@
     <div class="stats">
       <div class="stats__item">
         <img src="./img/face.svg" alt="face" class="stats__image">
-        <div class="stats__title">13 240</div>
-        <div class="stats__hint">Количество учащихся в ОДО</div>
+        <div class="stats__item-wrap">
+          <div class="stats__title">13 240</div>
+          <div class="stats__hint">Количество учащихся в ОДО</div>
+        </div>
       </div>
       <div class="stats__item">
         <img src="./img/star.svg" alt="face" class="stats__image">
-        <div class="stats__title">3 280</div>
-        <div class="stats__hint">Количество талантливых</div>
+        <div class="stats__item-wrap">
+          <div class="stats__title">3 280</div>
+          <div class="stats__hint">Количество талантливых</div>
+        </div>
       </div>
       <div class="stats__item">
         <img src="./img/house.svg" alt="face" class="stats__image">
-        <div class="stats__title">250</div>
-        <div class="stats__hint">Количество ОДО</div>
+        <div class="stats__item-wrap">
+          <div class="stats__title">250</div>
+          <div class="stats__hint">Количество ОДО</div>
+        </div>
       </div>
     </div>
+
     <div class="programs">
       <div class="programs__wrap">
         <div class="programs__title">Каталог программ</div>
@@ -210,9 +248,19 @@
 
             <div class="programs__item">
               <div class="programs__item-left">
-                <div class="programs__item-title">ДПОП «Живопись»</div>
-                <div class="programs__item-text">
-                  Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                <div>
+                  <div class="programs__item-title">ДПОП «Живопись»</div>
+                  <div class="programs__item-text">
+                    Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
                 </div>
               </div>
               <div class="programs__item-right">
@@ -222,64 +270,151 @@
 
             <div class="programs__item">
               <div class="programs__item-left">
-                <div class="programs__item-title">ДПОП «Живопись»</div>
-                <div class="programs__item-text">
-                  Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                <div>
+                  <div class="programs__item-title">Общеразвивающая программа по волейболу</div>
+                  <div class="programs__item-text">
+                    Занятия волейболом способствуют развитию и совершенствованию у занимающихся основных
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Платно</span>
                 </div>
               </div>
               <div class="programs__item-right">
-                <img src="./img/painting.png" alt="painting" class="programs__item-image">
+                <img src="./img/volleyball.png" alt="painting" class="programs__item-image">
               </div>
             </div>
+
             <div class="programs__item">
               <div class="programs__item-left">
-                <div class="programs__item-title">ДПОП «Живопись»</div>
-                <div class="programs__item-text">
-                  Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                <div>
+                  <div class="programs__item-title">ДПОП «Духовые и ударные инструменты»</div>
+                  <div class="programs__item-text">
+                    Программа составлена в соответствии с Федеральными государственными требованиями и адаптирована
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Платно</span>
                 </div>
               </div>
               <div class="programs__item-right">
-                <img src="./img/painting.png" alt="painting" class="programs__item-image">
+                <img src="./img/musical instruments.png" alt="painting" class="programs__item-image">
               </div>
             </div>
+
             <div class="programs__item">
               <div class="programs__item-left">
-                <div class="programs__item-title">ДПОП «Живопись»</div>
-                <div class="programs__item-text">
-                  Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                <div>
+                  <div class="programs__item-title">ДПОП «Струнные инструменты»</div>
+                  <div class="programs__item-text">
+                    Программа составлена в соответствии с Федеральными государственными требованиями и адаптирована
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Платно</span>
                 </div>
               </div>
               <div class="programs__item-right">
-                <img src="./img/painting.png" alt="painting" class="programs__item-image">
+                <img src="./img/musical instruments1.png" alt="painting" class="programs__item-image">
               </div>
             </div>
+
             <div class="programs__item">
               <div class="programs__item-left">
-                <div class="programs__item-title">ДПОП «Живопись»</div>
-                <div class="programs__item-text">
-                  Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                <div>
+                  <div class="programs__item-title">ДПОП «Народные инструменты»</div>
+                  <div class="programs__item-text">
+                    Программа составлена в соответствии с Федеральными государственными требованиями и адаптирована
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
                 </div>
               </div>
               <div class="programs__item-right">
-                <img src="./img/painting.png" alt="painting" class="programs__item-image">
+                <img src="./img/musical instruments2.png" alt="painting" class="programs__item-image">
               </div>
             </div>
+
             <div class="programs__item">
               <div class="programs__item-left">
-                <div class="programs__item-title">ДПОП «Живопись»</div>
-                <div class="programs__item-text">
-                  Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                <div>
+                  <div class="programs__item-title">Общеразвивающая программа по лыжным</div>
+                  <div class="programs__item-text">
+                    Навигатор для начинающих предпринимателей.
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
                 </div>
               </div>
               <div class="programs__item-right">
-                <img src="./img/painting.png" alt="painting" class="programs__item-image">
+                <img src="./img/skiing.png" alt="painting" class="programs__item-image">
               </div>
             </div>
+
             <div class="programs__item">
               <div class="programs__item-left">
-                <div class="programs__item-title">ДПОП «Живопись»</div>
-                <div class="programs__item-text">
-                  Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                <div>
+                  <div class="programs__item-title">Общеразвивающая программа по волейболу</div>
+                  <div class="programs__item-text">
+                    Занятия волейболом способствуют развитию и совершенствованию у занимающихся основных
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
+                </div>
+              </div>
+              <div class="programs__item-right">
+                <img src="./img/volleyball.png" alt="painting" class="programs__item-image">
+              </div>
+            </div>
+
+            <div class="programs__item">
+              <div class="programs__item-left">
+                <div>
+                  <div class="programs__item-title">ДПОП «Живопись»</div>
+                  <div class="programs__item-text">
+                    Состоит из учебных предметов обязательной части: Основы изобразительной грамоты и рисования, Прикладное
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
                 </div>
               </div>
               <div class="programs__item-right">
@@ -287,7 +422,148 @@
               </div>
             </div>
 
+
+            <div class="programs__item">
+              <div class="programs__item-left">
+                <div>
+                  <div class="programs__item-title">Общеразвивающая программа по волейболу</div>
+                  <div class="programs__item-text">
+                    Занятия волейболом способствуют развитию и совершенствованию у занимающихся основных
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Платно</span>
+                </div>
+              </div>
+              <div class="programs__item-right">
+                <img src="./img/volleyball.png" alt="painting" class="programs__item-image">
+              </div>
+            </div>
+
+            <div class="programs__item">
+              <div class="programs__item-left">
+                <div>
+                  <div class="programs__item-title">ДПОП «Духовые и ударные инструменты»</div>
+                  <div class="programs__item-text">
+                    Программа составлена в соответствии с Федеральными государственными требованиями и адаптирована
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Платно</span>
+                </div>
+              </div>
+              <div class="programs__item-right">
+                <img src="./img/musical instruments.png" alt="painting" class="programs__item-image">
+              </div>
+            </div>
+
+            <div class="programs__item">
+              <div class="programs__item-left">
+                <div>
+                  <div class="programs__item-title">ДПОП «Струнные инструменты»</div>
+                  <div class="programs__item-text">
+                    Программа составлена в соответствии с Федеральными государственными требованиями и адаптирована
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Платно</span>
+                </div>
+              </div>
+              <div class="programs__item-right">
+                <img src="./img/musical instruments1.png" alt="painting" class="programs__item-image">
+              </div>
+            </div>
+
+            <div class="programs__item">
+              <div class="programs__item-left">
+                <div>
+                  <div class="programs__item-title">ДПОП «Народные инструменты»</div>
+                  <div class="programs__item-text">
+                    Программа составлена в соответствии с Федеральными государственными требованиями и адаптирована
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
+                </div>
+              </div>
+              <div class="programs__item-right">
+                <img src="./img/musical instruments2.png" alt="painting" class="programs__item-image">
+              </div>
+            </div>
+
+            <div class="programs__item">
+              <div class="programs__item-left">
+                <div>
+                  <div class="programs__item-title">Общеразвивающая программа по лыжным</div>
+                  <div class="programs__item-text">
+                    Навигатор для начинающих предпринимателей.
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
+                </div>
+              </div>
+              <div class="programs__item-right">
+                <img src="./img/skiing.png" alt="painting" class="programs__item-image">
+              </div>
+            </div>
+
+            <div class="programs__item">
+              <div class="programs__item-left">
+                <div>
+                  <div class="programs__item-title">Общеразвивающая программа по волейболу</div>
+                  <div class="programs__item-text">
+                    Занятия волейболом способствуют развитию и совершенствованию у занимающихся основных
+                  </div>
+                </div>
+                <div class="programs__footer">
+                  <img src="./img/star-mini.svg" alt="star">
+                  <span>394</span>
+                  <img src="./img/child.svg" alt="child">
+                  <span>5 - 7 лет</span>
+                  <img src="./img/rouble.svg" alt="rouble">
+                  <span>Бесплатно</span>
+                </div>
+              </div>
+              <div class="programs__item-right">
+                <img src="./img/volleyball.png" alt="painting" class="programs__item-image">
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="programs__pagination">
+          <ul class="programs__pagination-list">
+            <li class="programs__pagination-item programs__pagination-item--active">1</li>
+            <li class="programs__pagination-item">2</li>
+            <li class="programs__pagination-item">3</li>
+            <li class="programs__pagination-item">4</li>
+            <li class="programs__pagination-item">5</li>
+          </ul>
         </div>
         <button class="programs__button">
           Все программы
@@ -298,11 +574,13 @@
   </main>
   <footer class="footer">
     <div class="footer__wrap">
-      <div class="footer__title">
-        Региональный портал
-        <br> Навигатор, 2018 г.
+      <div class="footer__left">
+        <div class="footer__title">
+          Региональный портал
+          <br class="mobile-visible"> Навигатор, 2018 г.
+        </div>
+        <a href="mailto:name@email.com" class="footer__mail">Обратная связь</a>
       </div>
-      <a href="mailto:name@email.com" class="footer__mail">Обратная связь</a>
       <div class="footer__social">
         <a href="https://vk.com">
           <img src="./img/vk-2.svg" alt="Vk" class="footer__social-icon">

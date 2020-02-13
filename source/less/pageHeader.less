@@ -30,6 +30,10 @@
   margin-bottom: 46px;
 }
 
+.page-header__main-wrap--open {
+  display: none
+}
+
 .page-header__main-left {
   display: flex;
   align-items: center;
@@ -39,4 +43,37 @@
   font-family: "GolosTextMedium", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 18px;
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-header__main {
+    width: @desktop-width;
+    background: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: -156px -83px;
+    height: auto;
+  }
+
+  .page-header__main-wrap {
+    justify-content: center;
+    margin-bottom: 159px;
+  }
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__logo {
+    width: 90px;
+    height: 90px;
+    margin-right: 24px;
+  }
+
+  .page-header__title {
+    font-family: "GostUiRegular", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
 }

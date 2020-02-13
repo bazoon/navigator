@@ -3,6 +3,7 @@
   margin: 0 auto;
   height: 48px;
   display: flex;
+  font-size: 11px;
 }
 
 .sub-nav__wrap {
@@ -25,8 +26,6 @@
 }
 
 .sub-nav__link {
-  font-size: 11px;
-  font-family: "GolosTextMedium", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: @gray1;
 }
@@ -40,8 +39,31 @@
 }
 
 .sub-nav__item {
-  font-size: 11px;
-  font-family: "GolosTextMedium", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: @gray1;
+}
+
+
+@media (min-width: @desktop-width) {
+
+  .sub-nav {
+    width: @desktop-width;
+    border-bottom: solid 1px @gray6;
+    font-family: "GostUiMedium", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sub-nav__pin {
+    margin-right: 8px;
+  }
+
+  .sub-nav__item--choose {
+    margin-right: 24px;
+  }
+
+  .sub-nav__item--cab {
+    margin-right: 8px;
+  }
+
 }

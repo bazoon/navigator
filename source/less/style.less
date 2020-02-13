@@ -10,6 +10,7 @@
 @import "./stats.less";
 @import "./programs.less";
 @import "./footer.less";
+@import "./mobileHeader.less";
 
 body {
   font-family: "GolosTextMedium", Arial, Helvetica, sans-serif;
@@ -35,6 +36,10 @@ body * {
 }
 
 @media (min-width: @desktop-width) {
+  body {
+    font-family: "GostUiRegular", Arial, Helvetica, sans-serif;
+  }
+
   .mobile-visible {
     display: none;
   }
@@ -43,3 +48,5 @@ body * {
     display: inline;
   }
 }
+
+
