@@ -122,7 +122,7 @@
     margin-right: 0;
     padding: 0;
   }
-  .main-nav__list--closed {
+  .main-nav__list {
     width: 630px;
     display: -webkit-box;
     display: -ms-flexbox;
