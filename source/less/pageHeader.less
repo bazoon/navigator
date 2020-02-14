@@ -45,6 +45,37 @@
   line-height: 18px;
 }
 
+@media (min-width: @tablet-width) {
+  .page-header__main {
+    width: @tablet-width;
+    background: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: -126px -23px;
+    height: auto;
+  }
+
+  .page-header__main-wrap {
+    justify-content: center;
+    margin-bottom: 159px;
+  }
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__title {
+    font-family: "GostUiRegular", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .page-header__logo {
+    width: 90px;
+    height: 90px;
+    margin-right: 18px;
+  }
+
+}
 
 @media (min-width: @desktop-width) {
   .page-header__main {

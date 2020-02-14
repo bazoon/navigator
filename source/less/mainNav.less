@@ -57,6 +57,40 @@
   display: none;
 }
 
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: @tablet-width;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "GostUiMedium", Arial, Helvetica, sans-serif;
+  }
+
+  .main-nav__item--cab {
+    display: none;
+  }
+
+  .main-nav__wrap {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .main-nav__list {
+    width: 630px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+}
+
 
 @media (min-width: @desktop-width) {
   .main-nav {

@@ -67,6 +67,25 @@
   align-items: center;
 }
 
+@media (min-width: @tablet-width) {
+  .news {
+    width: @tablet-width;
+  }
+
+  .news__wrap {
+    margin-left: 0;
+  }
+
+  .news__item {
+    width: calc(@tablet-width / 3);
+  }
+
+  .news__image {
+    width: 100%;
+  }
+
+}
+
 @media (min-width: @desktop-width) {
   .news {
     width: @desktop-width;

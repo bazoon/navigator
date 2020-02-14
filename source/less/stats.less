@@ -33,6 +33,30 @@
   color: @gray1;
 }
 
+@media (min-width: @tablet-width) {
+  .stats {
+    width: @tablet-width;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px @gray6;
+    margin-bottom: 70px;
+  }
+
+  .stats__item-wrap {
+    align-items: start;
+  }
+
+  .stats__item {
+    flex-direction: row;
+    margin-bottom: 72px;
+  }
+
+  .stats__image {
+    margin-right: 24px;
+  }
+
+}
+
 @media (min-width: @desktop-width) {
   .stats {
     width: @desktop-width;
