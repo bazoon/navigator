@@ -41,6 +41,14 @@
   &:last-child {
     margin-right: 0px;
   }
+
+  &:hover img {
+    filter: brightness(0.8);
+  }
+
+  &:hover .programs__item-title {
+    color: darken(@gray2, 30%);
+  }
 }
 
 .programs__item-title {
@@ -58,6 +66,7 @@
 .programs__item-image {
   width: 22px;
   height: 24px;
+
 }
 
 .programs__button {
