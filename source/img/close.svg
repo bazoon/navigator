@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Elements / Icons / S / Cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="12 10.5 16.5 6 18 7.5 13.5 12 18 16.5 16.5 18 12 13.5 7.5 18 6 16.5 10.5 12 6 7.5 7.5 6"></polygon>
+    </defs>
+    <g id="Elements-/-Icons-/-S-/-Cross" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cross">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="_Resources-/-ChangeColorsHere-/-Platinum" mask="url(#mask-2)" fill="#C7CCD1">
+                <rect id="Rectangle-4-Copy-11" x="0" y="0" width="24" height="24" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

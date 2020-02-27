@@ -19,7 +19,7 @@ var csso = require('gulp-csso');
 var uglify = require('gulp-uglify');
 
 gulp.task('clean', function () {
-  return del('build/');
+  return del('./dist/**/*');
 });
 
 gulp.task("jsmin", function () {
@@ -84,6 +84,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/less/**/*.less", gulp.series("clean", "files", "js", "css", "html"));
   gulp.watch("source/*.html", gulp.series("clean", "files", "css", "js", "html"));
+  gulp.watch("source/js/*.js", gulp.series("js"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 

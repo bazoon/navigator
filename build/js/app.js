@@ -27,7 +27,15 @@ Page.prototype.toggleMenu = function () {
 function main() {
   var page = new Page();
   page.setupMenu();
-  easydropdown.all();
+  // easydropdown.all();
+
+  // Array.prototype.forEach.call($('select'), function (select) {
+  //   $(select).select2({
+  //     placeholder: select.querySelector('option').innerText,
+  //     allowClear: true
+  //   });
+  // });
+
 }
 
 document.addEventListener("DOMContentLoaded", main);

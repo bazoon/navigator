@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/style.css">
   <title>Навигатор дополнительного образования Воронежской области</title>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -39,19 +40,19 @@
         <div class="main-nav__wrap">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              Программы
+              <a href="http://">Программы</a>
             </li>
             <li class="main-nav__item">
-              Мероприятия
+              <a href="http://">Мероприятия</a>
             </li>
             <li class="main-nav__item">
-              Организации
+              <a href="http://">Организации</a>
             </li>
             <li class="main-nav__item">
-              Талантливые дети
+              <a href="http://">Талантливые дети</a>
             </li>
             <li class="main-nav__item">
-              Документы
+              <a href="http://">Документы</a>
             </li>
             <li class="main-nav__item main-nav__item--cab">
               <img src="./img/key.svg" alt="key" class="main-nav__item-icon"> Личный кабинет
@@ -72,6 +73,7 @@
           </div>
           <img class="page-header__toggle" src="./img/icon-menu-burger.svg" alt="">
         </div>
+
         <div class="search-box">
           <div class="search-box__input-wrap">
             <img src="./img/search.svg" alt="search icon" class="search-box__icon">
@@ -84,68 +86,103 @@
             </div>
             <div class="search-box__wrap2">
               <div class="search-box__select">
-                <label class="search-box__label">Муниципалитет</label>
-                <select>
-                  <option value="" data-placeholder>Муниципалитет</option>
-                  <option value="0"> Аннинский район</option>
-                  <option value="1">Бобровский район</option>
-                  <option value="2">Богучарский район</option>
-                  <option value="3"> Бутурлиновский район</option>
-                </select>
+                <div class="select" id="customSelect_1" tabindex="0">
+                  <select id="customSelect_1_select">
+                    <option value="" data-placeholder>Муниципалитет</option>
+                    <option value="0"> Аннинский район</option>
+                    <option value="1">Бобровский район</option>
+                    <option value="2">Богучарский район</option>
+                    <option value="3"> Бутурлиновский район</option>
+                  </select>
+                  <ul class="options" id="customSelect_1_options">
+                  </ul>
+                  <div class="value" id="customSelect_1_value"></div>
+                  <div class="icon" id="customSelect_1_icon"></div>
+                </div>
               </div>
 
               <div class="search-box__select">
-                <label class="search-box__label">Организация</label>
-                <select>
-                  <option value="" data-placeholder>Организация</option>
-                  <option value="0">ООО Ромашка</option>
-                  <option value="1">ЗАО Дворец пионеров</option>
-                </select>
+                <div class="select" id="customSelect_2" tabindex="0">
+                  <select id="customSelect_2_select">
+                    <option value="" data-placeholder>Организация</option>
+                    <option value="0">ООО Ромашка</option>
+                    <option value="1">ЗАО Дворец пионеров</option>
+                  </select>
+                  <ul class="options" id="customSelect_2_options">
+                  </ul>
+                  <div class="value" id="customSelect_2_value"></div>
+                  <div class="icon" id="customSelect_2_icon"></div>
+                </div>
               </div>
 
               <div class="search-box__select">
-                <label class="search-box__label">Направление</label>
-                <select>
-                  <option value="" data-placeholder>Направление</option>
-                  <option value="0">Естественно-научное</option>
-                  <option value="1">Техническое</option>
-                </select>
+                <div class="select" id="customSelect_3" tabindex="0">
+                  <select id="customSelect_3_select">
+                    <option value="" data-placeholder>Направление</option>
+                    <option value="0">Естественно-научное</option>
+                    <option value="1">Техническое</option>
+                  </select>
+                  <ul class="options" id="customSelect_3_options">
+                  </ul>
+                  <div class="value" id="customSelect_3_value"></div>
+                  <div class="icon" id="customSelect_3_icon"></div>
+                </div>
               </div>
 
               <div class="search-box__select">
-                <label class="search-box__label">Профиль</label>
-                <select>
-                  <option value="" data-placeholder>Профиль</option>
-                  <option value="0">Волонтерская работа</option>
-                  <option value="1">Профессиональная ориентация</option>
-                </select>
+                <div class="select" id="customSelect_4" tabindex="0">
+                  <select id="customSelect_4_select">
+                    <option value="" data-placeholder>Профиль</option>
+                    <option value="0">Волонтерская работа</option>
+                    <option value="1">Профессиональная ориентация</option>
+                  </select>
+                  <ul class="options" id="customSelect_4_options">
+                  </ul>
+                  <div class="value" id="customSelect_4_value"></div>
+                  <div class="icon" id="customSelect_4_icon"></div>
+                </div>
               </div>
 
               <div class="search-box__select">
-                <label class="search-box__label">Стоимость</label>
-                <select>
-                  <option value="" data-placeholder>Стоимость</option>
-                  <option value="0">Бесплатная</option>
-                  <option value="1">Платная</option>
-                </select>
+                <div class="select" id="customSelect_5" tabindex="0">
+                  <select id="customSelect_5_select">
+                    <option value="" data-placeholder>Стоимость</option>
+                    <option value="0">Бесплатная</option>
+                    <option value="1">Платная</option>
+                  </select>
+                  <ul class="options" id="customSelect_5_options">
+                  </ul>
+                  <div class="value" id="customSelect_5_value"></div>
+                  <div class="icon" id="customSelect_5_icon"></div>
+                </div>
               </div>
 
               <div class="search-box__select">
-                <label class="search-box__label">Возраст от</label>
-                <select>
-                  <option value="" data-placeholder>Возраст от</option>
-                  <option value="0">от 3 лет</option>
-                  <option value="1">от 4 лет</option>
-                </select>
+                <div class="select" id="customSelect_6" tabindex="0">
+                  <select id="customSelect_6_select">
+                    <option value="" data-placeholder>Возраст от</option>
+                    <option value="0">от 3 лет</option>
+                    <option value="1">от 4 лет</option>
+                  </select>
+                  <ul class="options" id="customSelect_6_options">
+                  </ul>
+                  <div class="value" id="customSelect_6_value"></div>
+                  <div class="icon" id="customSelect_6_icon"></div>
+                </div>
               </div>
 
               <div class="search-box__select">
-                <label class="search-box__label">Возраст до</label>
-                <select>
-                  <option value="" data-placeholder>Возраст до</option>
-                  <option value="0">до 3 лет</option>
-                  <option value="1">до 4 лет</option>
-                </select>
+                <div class="select" id="customSelect_7" tabindex="0">
+                  <select id="customSelect_7_select">
+                    <option value="" data-placeholder>Возраст до</option>
+                    <option value="0">до 3 лет</option>
+                    <option value="1">до 4 лет</option>
+                  </select>
+                  <ul class="options" id="customSelect_7_options">
+                  </ul>
+                  <div class="value" id="customSelect_7_value"></div>
+                  <div class="icon" id="customSelect_7_icon"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -565,10 +602,11 @@
             <li class="programs__pagination-item">5</li>
           </ul>
         </div>
-        <button class="programs__button">
-          Все программы
-        </button>
+
       </div>
+      <button class="programs__button">
+        Все программы
+      </button>
     </div>
 
   </main>
@@ -597,7 +635,10 @@
       </div>
     </div>
   </footer>
-  <script src="./js/easydropdown.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+  <!-- <script src="./js/easydropdown.js"></script> -->
+  <script src="./js/select.js"></script>
   <script src="./js/app.js"></script>
 </body>
 

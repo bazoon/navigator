@@ -1,0 +1,121 @@
+.select {
+  height: 48px;
+  width: 100%;
+  background: @white;
+  border-radius: 4px;
+  border: solid 1px @blue4;
+  color: @gray2;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  outline: none;
+
+  select {
+    display: none;
+  }
+
+  &.open {
+    background: white;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.06), 0 2px 4px 0 rgba(0,7,123,0.04);
+    .options {
+      display: block;
+    }
+
+    .icon {
+      transform: rotate(90deg);
+      transition: 0.3s;
+    }
+  }
+
+  &.white {
+    background: white;
+    border: 1px solid silver;
+    &.valued {
+      color: #000000;
+      border: 1px solid silver;
+    }
+
+    &.open {
+      border: none;
+      padding: 1px;
+    }
+  }
+
+  &.valued {
+    background: transparent;
+    border: 1px solid silver;
+    color: @gray2;
+    .icon {
+      background: url("../img/close.svg");
+    }
+  }
+
+  &.valued.open {
+    background: white;
+    color: #000000;
+    border: none !important;
+    .icon {
+      background: url("../img/down.svg");
+    }
+  }
+
+  &.inverted {
+    &.valued {
+      color: #000000;
+      border: 1px solid silver;
+    }
+  }
+
+  .options {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    top: 48px;
+    left: 0;
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    z-index: 10;
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.06), 0 2px 4px 0 rgba(0,7,123,0.04);
+    overflow: hidden;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    li {
+      border-bottom: 1px solid @gray3;
+      padding: 14px 16px 14px;
+      transition: 0.3s;
+      &:hover {
+        background: @gray3;
+        transition: 0.3s;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .value {
+    position: relative;
+    padding: 14px 32px 14px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .icon {
+    position: absolute;
+    cursor: pointer;
+    right: 3px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url("../img/down.svg");
+    transform: rotate(-90deg);
+    transition: 0.3s;
+  }
+}

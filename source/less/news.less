@@ -1,7 +1,7 @@
 .news {
   margin: 0 auto;
   margin-bottom: 48px;
-  width: @mobile-width;
+  width: 100%;
 }
 
 .news__wrap {
@@ -78,15 +78,15 @@
 
 @media (min-width: @tablet-width) {
   .news {
-    width: @tablet-width;
+    width: 100%;
   }
 
   .news__wrap {
-    margin-left: 0;
+    margin-left: 10px;
   }
 
   .news__item {
-    width: calc(@tablet-width / 3);
+    width: calc(100% / 3 - 20px);
   }
 
   .news__image {
