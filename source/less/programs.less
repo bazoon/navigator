@@ -223,6 +223,16 @@
     position: relative;
     align-items: center;
     cursor: pointer;
+    &:hover {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 49px;
+        height: 2px;
+        bottom: 0;
+        background-color: @blue3;
+      }
+    }
   }
 
   .programs__pagination-item--active {

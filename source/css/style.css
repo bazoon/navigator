@@ -75,6 +75,9 @@
           align-items: center;
   color: #000000;
 }
+.main-nav__item:hover a {
+  color: #666666;
+}
 .main-nav__item--cab {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1372,6 +1375,14 @@
             align-items: center;
     cursor: pointer;
   }
+  .programs__pagination-item:hover::before {
+    position: absolute;
+    content: "";
+    width: 49px;
+    height: 2px;
+    bottom: 0;
+    background-color: #0c49cd;
+  }
   .programs__pagination-item--active {
     cursor: auto;
   }
@@ -1740,6 +1751,13 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+@media (min-width: 1120px) {
+  .city-select__wrap {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 body {
   font-family: "GolosTextMedium", Arial, Helvetica, sans-serif;
