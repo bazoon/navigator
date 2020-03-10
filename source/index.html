@@ -17,14 +17,25 @@
         <div class="sub-nav__wrap">
           <a href="https://gosuslugi.ru" class="sub-nav__left sub-nav__link">
             <img src="./img/other.svg" class="sub-nav__link-image" />
-            <div>Перейти на портал услуг</div>
+            <div>Госуслуги</div>
           </a>
           <div class="sub-nav__right">
             <img src="./img/pin.svg" class="sub-nav__pin">
-            <div class="sub-nav__item sub-nav__item--choose desktop-visible">Тюмень</div>
-            <img src="./img/avatar.svg" class="desktop-visible sub-nav__item--cab" />
-            <div class="sub-nav__item   desktop-visible">Личный кабинет</div>
-            <div class="sub-nav__item mobile-visible">Вход</div>
+            <div class="sub-nav__item sub-nav__item--choose">Тюмень</div>
+            <img src="./img/avatar.svg" class="sub-nav__item--cab sub-nav__item--user-avatar" />
+            <div class="sub-nav__item sub-nav__item sub-nav__item--user">Алексей</div>
+            <img src="./img/carret-down.svg" class="sub-nav__item--user-carret sub-nav__item--user-carret-up" />
+            <div class="sub-nav__user-menu sub-nav__user-menu-hidden">
+              <ul class="sub-nav__user-menu-list">
+                <li>
+                  <span>Личный кабинет</span>
+                  <img src="./img/avatar.svg" class="sub-nav__item--cab" />
+                </li>
+                <li>Выйти из аккаунта
+                  <img src="./img/quit.svg" width="21" height="19" />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -635,11 +646,27 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-  <!-- <script src="./js/easydropdown.js"></script> -->
-  <script src="./js/select.js"></script>
+
+  <div class="city-select">
+    <div class="city-select__cover city-select__cover-hidden">
+      <div class="city-select__wrap">
+        <form>
+          <div class="city-select__input-wrap">
+            <input tabindex="1" required type="text" class="city-select-search" id="city-search">
+            <label for="city-search" class="city-select__label">Введите название города</label>
+            <img class="city-select__cross" src="./img/cross.svg" alt="">
+            <ul class="city-select__list">
+            </ul>
+          </div>
+        </form>
+        <button tabindex="4" class="city-select__button">Выбрать</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery.js"></script>
   <script src="./js/app.js"></script>
+  <script src="./js/select.js"></script>
 </body>
 
 </html>

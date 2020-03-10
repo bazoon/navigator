@@ -29,6 +29,9 @@ gulp.task("jsmin", function () {
 });
 
 gulp.task('js', function () {
+  gulp.src("source/json/*.*")
+    .pipe(gulp.dest("build/js"))
+
   return gulp.src("source/js/*.*")
     .pipe(gulp.dest("build/js"))
 });
